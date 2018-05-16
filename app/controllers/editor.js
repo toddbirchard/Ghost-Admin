@@ -94,6 +94,7 @@ export default Controller.extend({
 
     /* public properties -----------------------------------------------------*/
 
+    infoMessage: 'This post can only be edited with the Koenig editor.',
     leaveEditorTransition: null,
     shouldFocusEditor: false,
     showDeletePostModal: false,
@@ -516,7 +517,7 @@ export default Controller.extend({
             // display an alert if koenig is disabled but we use it anyway
             // because the post is incompatible with the markdown editor
             if (!koenigEnabled) {
-                alert('This post will be opened with the Koenig editor because it\'s not compatible with the markdown editor');
+                // alert('This post will be opened with the Koenig editor because it\'s not compatible with the markdown editor');
             }
         } else {
             this.set('useKoenig', false);
